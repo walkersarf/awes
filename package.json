@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node dist-server/server.js",
-    "build": "echo \"Already built for deployment\""
+    "build:server": "echo \"Already built for deployment\"",
+    "build:client": "echo \"Already built for deployment\"",
+    "build": "npm run build:server && npm run build:client"
   },
   "dependencies": {
     "archiver": "^7.0.1",
