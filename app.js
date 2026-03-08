@@ -6,4 +6,12 @@
 const serverPort = process.env.PORT || 3000;
 process.env.PORT = serverPort;
 
-require('./dist-server/server.js');
+const serverApp = require('./dist-server/server.js').default;
+
+serverApp.then(app => {
+    app.listen(serverPort, '127.0.0.1', () => {
+        console.log(`Server running on port ${serverPort}`);
+    });
+}).catch(err => {
+    console.error("Failed to start server:", err);
+});
