@@ -3,13 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "tsx server.ts",
     "start": "node dist-server/server.js",
-    "build:server": "tsc",
-    "build:client": "vite build",
-    "build": "npm run build:server && npm run build:client",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "echo \"Already built for deployment\""
   },
   "dependencies": {
     "archiver": "^7.0.1",
