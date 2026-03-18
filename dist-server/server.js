@@ -113,10 +113,10 @@ const DEFAULT_MAJOR_COMPONENTS = [
 async function initDB() {
     try {
         pool = promise_1.default.createPool({
-            host: process.env.DB_HOST || 'localhost',
-            user: process.env.DB_USER || 'root',
-            password: process.env.DB_PASS || '',
-            database: process.env.DB_NAME || 'awesbdco_pms',
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASS,
+            database: process.env.DB_NAME,
             waitForConnections: true,
             connectionLimit: 5,
             queueLimit: 0,
@@ -267,7 +267,7 @@ app.use("/api", (req, res, next) => {
         if (req.path.includes('/login') || req.path.includes('/password')) {
             return next();
         }
-        
+
         const originalJson = res.json;
         const originalSend = res.send;
 
@@ -281,13 +281,13 @@ app.use("/api", (req, res, next) => {
 
         res.json = function (body) {
             if (res.statusCode >= 200 && res.statusCode < 300) {
-                 logAudit(userId, action, collection, recordId, details);
+                logAudit(userId, action, collection, recordId, details);
             }
             return originalJson.call(this, body);
         };
         res.send = function (body) {
             if (res.statusCode >= 200 && res.statusCode < 300) {
-                 logAudit(userId, action, collection, recordId, details);
+                logAudit(userId, action, collection, recordId, details);
             }
             return originalSend.call(this, body);
         };
@@ -608,7 +608,7 @@ app.get("/api/:collection", async (req, res, next) => {
 app.post("/api/:collection", async (req, res, next) => {
     const collection = req.params.collection;
     const tableName = collection.replace(/[A-Z]/g, (l) => `_${l.toLowerCase()}`);
-    
+
     const userRole = req.headers['x-user-role'];
     const mainCollections = ['projects', 'leads', 'transactions', 'services', 'suppliers', 'contractors', 'partner_orders', 'deliveries'];
     if (mainCollections.includes(collection)) {
@@ -753,7 +753,7 @@ app.put("/api/:collection/:id", async (req, res, next) => {
                 updates.push('isApproved = ?');
                 params.push(rest.isApproved ? 1 : 0);
             }
-            
+
             updates.push('pendingUpdate = NULL');
             updates.push('pendingDelete = 0');
             if (collection === 'projects') {
