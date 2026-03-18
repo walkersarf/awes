@@ -610,6 +610,10 @@ app.get("/api/:collection", async (req, res, next) => {
                 query += ` WHERE (isApproved = 1 OR createdBy = ?)`;
                 queryParams.push(req.headers['x-user-id']);
             }
+            // Sort audit logs newest-first
+            if (tableName === 'audit_logs') {
+                query += ` ORDER BY JSON_UNQUOTE(JSON_EXTRACT(data, '$.timestamp')) DESC`;
+            }
             const [rows] = await pool.query(query, queryParams);
             const data = rows.map((r) => {
                 const parsed = r.data ? (typeof r.data === 'string' ? JSON.parse(r.data) : r.data) : {};
