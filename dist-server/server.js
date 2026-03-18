@@ -233,6 +233,68 @@ const transporter = nodemailer_1.default.createTransport({
 // In-memory store for password reset codes
 // Format: { 'email': { code: '123456', expires: Date.now() + 15 mins } }
 const resetCodes = {};
+
+// --- Audit Log Helper ---
+async function logAudit(userId, action, collection, recordId, details) {
+    const logId = 'AL' + Date.now() + Math.floor(Math.random() * 1000);
+    const logData = {
+        userId: userId || 'SYSTEM',
+        action,
+        collection,
+        recordId,
+        details,
+        timestamp: new Date().toISOString()
+    };
+    try {
+        if (useSQL) {
+            await pool.query('INSERT INTO audit_logs (id, data) VALUES (?, ?)', [logId, JSON.stringify(logData)]);
+        } else {
+            const db = readJSON();
+            if (!db.auditLogs) db.auditLogs = [];
+            db.auditLogs.unshift({ id: logId, ...logData });
+            // keep the last 2000 logs max
+            if (db.auditLogs.length > 2000) db.auditLogs.pop();
+            writeJSON(db);
+        }
+    } catch (e) {
+        console.error("Failed to write audit log:", e);
+    }
+}
+
+// --- Audit Log Middleware ---
+app.use("/api", (req, res, next) => {
+    if (['POST', 'PUT', 'DELETE'].includes(req.method)) {
+        if (req.path.includes('/login') || req.path.includes('/password')) {
+            return next();
+        }
+        
+        const originalJson = res.json;
+        const originalSend = res.send;
+
+        const userId = req.headers['x-user-id'] || 'SYSTEM';
+        const action = req.method;
+        const pathParts = req.path.split('/').filter(Boolean);
+        const collection = pathParts[0] || 'unknown';
+        const recordId = pathParts[1] || (req.body && req.body.id) || null;
+        let details = { ...req.body };
+        if (details.password) details.password = '***';
+
+        res.json = function (body) {
+            if (res.statusCode >= 200 && res.statusCode < 300) {
+                 logAudit(userId, action, collection, recordId, details);
+            }
+            return originalJson.call(this, body);
+        };
+        res.send = function (body) {
+            if (res.statusCode >= 200 && res.statusCode < 300) {
+                 logAudit(userId, action, collection, recordId, details);
+            }
+            return originalSend.call(this, body);
+        };
+    }
+    next();
+});
+
 // --- API Routes ---
 // --- Authentication & Password Recovery ---
 // 1. Request Password Reset
@@ -546,6 +608,17 @@ app.get("/api/:collection", async (req, res, next) => {
 app.post("/api/:collection", async (req, res, next) => {
     const collection = req.params.collection;
     const tableName = collection.replace(/[A-Z]/g, (l) => `_${l.toLowerCase()}`);
+    
+    const userRole = req.headers['x-user-role'];
+    const mainCollections = ['projects', 'leads', 'transactions', 'services', 'suppliers', 'contractors', 'partner_orders', 'deliveries'];
+    if (mainCollections.includes(collection)) {
+        if (collection === 'leads' || userRole === 'ADMIN') {
+            req.body.isApproved = true;
+        } else {
+            req.body.isApproved = false;
+        }
+    }
+
     try {
         if (useSQL) {
             // Handle simple string lists (rolesList, capacityList, etc.)
@@ -669,6 +742,10 @@ app.put("/api/:collection/:id", async (req, res, next) => {
                 }
             }
             // ADMIN logic or approved update
+            // Aggressively clear pending states both in JSON payload and SQL columns
+            rest.pendingUpdate = null;
+            rest.pendingDelete = null;
+
             const updateData = JSON.stringify(rest);
             const updates = ['data = JSON_MERGE_PATCH(COALESCE(data, "{}"), ?)'];
             const params = [updateData];
@@ -676,6 +753,9 @@ app.put("/api/:collection/:id", async (req, res, next) => {
                 updates.push('isApproved = ?');
                 params.push(rest.isApproved ? 1 : 0);
             }
+            
+            updates.push('pendingUpdate = NULL');
+            updates.push('pendingDelete = 0');
             if (collection === 'projects') {
                 if (rest.status) {
                     updates.push('status = ?');
@@ -736,7 +816,7 @@ app.put("/api/:collection/:id", async (req, res, next) => {
                         };
                     }
                     else {
-                        db[collection][index] = { ...db[collection][index], ...req.body };
+                        db[collection][index] = { ...db[collection][index], ...req.body, pendingUpdate: null, pendingDelete: null };
                     }
                     writeJSON(db);
                     res.json(db[collection][index]);

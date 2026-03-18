@@ -5,6 +5,7 @@
 
 const serverPort = process.env.PORT || 3000;
 process.env.PORT = serverPort;
+process.env.NODE_ENV = 'production';
 
 const serverApp = require('./dist-server/server.js').default;
 
