@@ -1,7 +1,21 @@
 {
   "name": "aw-engineering-solution---pms",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/walkersarf/awes#readme",
+  "bugs": {
+    "url": "https://github.com/walkersarf/awes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkersarf/awes.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
   "scripts": {
     "start": "node dist-server/server.js",
     "build:server": "echo \"Already built for deployment\"",
@@ -47,10 +61,5 @@
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.56.0",
     "vite": "^6.2.0"
-  },
-  "main": "app.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
