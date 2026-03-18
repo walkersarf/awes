@@ -235,14 +235,44 @@ const transporter = nodemailer_1.default.createTransport({
 const resetCodes = {};
 
 // --- Audit Log Helper ---
-async function logAudit(userId, action, collection, recordId, details) {
+// Helper to get a short name for the entity
+function buildAuditDescription(method, collection, body) {
+    const name = body.name || body.clientName || body.userName || body.productName || body.title || body.subject || null;
+    const entityLabel = collection.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase());
+    if (method === 'POST') return name ? `Created new ${entityLabel}: "${name}"` : `Created new ${entityLabel} record`;
+    if (method === 'PUT') return name ? `Updated ${entityLabel}: "${name}"` : `Updated ${entityLabel} record`;
+    if (method === 'DELETE') return name ? `Deleted ${entityLabel}: "${name}"` : `Deleted ${entityLabel} record`;
+    return `${method} on ${entityLabel}`;
+}
+
+async function getUserName(userId) {
+    if (!userId || userId === 'SYSTEM') return 'System';
+    try {
+        if (useSQL) {
+            const [rows] = await pool.query('SELECT data FROM users WHERE id = ?', [userId]);
+            if (rows.length > 0) {
+                const parsed = typeof rows[0].data === 'string' ? JSON.parse(rows[0].data) : rows[0].data;
+                return parsed.name || parsed.username || userId;
+            }
+        } else {
+            const db = readJSON();
+            const user = (db.users || []).find(u => u.id === userId);
+            if (user) return user.name || user.username || userId;
+        }
+    } catch (e) { /* fallback */ }
+    return userId;
+}
+
+async function logAudit(userId, action, collection, recordId, description) {
     const logId = 'AL' + Date.now() + Math.floor(Math.random() * 1000);
+    const userName = await getUserName(userId);
     const logData = {
         userId: userId || 'SYSTEM',
+        userName,
         action,
-        collection,
+        entity: collection,
         recordId,
-        details,
+        details: description,
         timestamp: new Date().toISOString()
     };
     try {
@@ -264,7 +294,7 @@ async function logAudit(userId, action, collection, recordId, details) {
 // --- Audit Log Middleware ---
 app.use("/api", (req, res, next) => {
     if (['POST', 'PUT', 'DELETE'].includes(req.method)) {
-        if (req.path.includes('/login') || req.path.includes('/password')) {
+        if (req.path.includes('/login') || req.path.includes('/password') || req.path.includes('/forgot') || req.path.includes('/reset')) {
             return next();
         }
 
@@ -272,22 +302,25 @@ app.use("/api", (req, res, next) => {
         const originalSend = res.send;
 
         const userId = req.headers['x-user-id'] || 'SYSTEM';
-        const action = req.method;
+        const methodToAction = { 'POST': 'CREATE', 'PUT': 'UPDATE', 'DELETE': 'DELETE' };
+        const action = methodToAction[req.method] || req.method;
         const pathParts = req.path.split('/').filter(Boolean);
         const collection = pathParts[0] || 'unknown';
         const recordId = pathParts[1] || (req.body && req.body.id) || null;
-        let details = { ...req.body };
-        if (details.password) details.password = '***';
+        // Build a sanitised body for description (strip password)
+        const safeBody = { ...req.body };
+        if (safeBody.password) delete safeBody.password;
+        const description = buildAuditDescription(req.method, collection, safeBody);
 
         res.json = function (body) {
             if (res.statusCode >= 200 && res.statusCode < 300) {
-                logAudit(userId, action, collection, recordId, details);
+                logAudit(userId, action, collection, recordId, description);
             }
             return originalJson.call(this, body);
         };
         res.send = function (body) {
             if (res.statusCode >= 200 && res.statusCode < 300) {
-                logAudit(userId, action, collection, recordId, details);
+                logAudit(userId, action, collection, recordId, description);
             }
             return originalSend.call(this, body);
         };
