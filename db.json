@@ -6,7 +6,52 @@
   "suppliers": [],
   "contractors": [],
   "partnerOrders": [],
-  "deliveries": [],
+  "deliveries": [
+    {
+      "id": "D57004",
+      "projectId": "P7744",
+      "productName": "Traction Motor",
+      "category": "PRODUCT",
+      "quantity": 1,
+      "deliveryDate": "2026-04-02",
+      "status": "Delivered",
+      "remarks": "Auto-entry from PO: INV-2026-2186",
+      "isApproved": true
+    },
+    {
+      "id": "D62870",
+      "projectId": "P7744",
+      "productName": "Guide Rails",
+      "category": "PRODUCT",
+      "quantity": 10,
+      "deliveryDate": "2026-04-02",
+      "status": "Delivered",
+      "remarks": "Auto-entry from PO: INV-2026-2186",
+      "isApproved": true
+    },
+    {
+      "id": "D6169",
+      "projectId": "P7744",
+      "productName": "Traction Motor",
+      "category": "MATERIAL",
+      "quantity": 1,
+      "deliveryDate": "2026-04-02",
+      "status": "Installed",
+      "remarks": "",
+      "isApproved": true
+    },
+    {
+      "id": "D9288",
+      "projectId": "P7744",
+      "productName": "Guide Rails",
+      "category": "MATERIAL",
+      "quantity": 1,
+      "deliveryDate": "2026-04-02",
+      "status": "Installed",
+      "remarks": "",
+      "isApproved": true
+    }
+  ],
   "users": [
     {
       "id": "u1",
@@ -31,7 +76,888 @@
     "Traveling Cable",
     "Safety Gear"
   ],
-  "auditLogs": [],
+  "auditLogs": [
+    {
+      "id": "AL1775156925994921",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156925990",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:45.996Z"
+    },
+    {
+      "id": "AL1775156925993289",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156925990",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:45.994Z"
+    },
+    {
+      "id": "AL1775156925985737",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Deleted Projects record",
+      "timestamp": "2026-04-02T19:08:45.987Z"
+    },
+    {
+      "id": "AL1775156922374557",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156922370",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:42.376Z"
+    },
+    {
+      "id": "AL1775156922373741",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156922370",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:42.374Z"
+    },
+    {
+      "id": "AL1775156922367639",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156922361",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:42.370Z"
+    },
+    {
+      "id": "AL1775156922366998",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156922361",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:42.368Z"
+    },
+    {
+      "id": "AL1775156922358380",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:08:42.360Z"
+    },
+    {
+      "id": "AL1775156922357713",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:08:42.359Z"
+    },
+    {
+      "id": "AL1775156922344308",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "transactions",
+      "recordId": "T1745",
+      "details": "Deleted Transactions record",
+      "timestamp": "2026-04-02T19:08:42.345Z"
+    },
+    {
+      "id": "AL1775156920553954",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156920545",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:40.556Z"
+    },
+    {
+      "id": "AL1775156920552298",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156920545",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:40.554Z"
+    },
+    {
+      "id": "AL177515692053744",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "transactions",
+      "recordId": "TXN8363",
+      "details": "Deleted Transactions record",
+      "timestamp": "2026-04-02T19:08:40.538Z"
+    },
+    {
+      "id": "AL1775156916670872",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156916661",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:36.672Z"
+    },
+    {
+      "id": "AL1775156916669389",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156916661",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:08:36.670Z"
+    },
+    {
+      "id": "AL1775156916658406",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Deleted Suppliers record",
+      "timestamp": "2026-04-02T19:08:36.659Z"
+    },
+    {
+      "id": "AL1775156870216359",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156870212",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:07:50.219Z"
+    },
+    {
+      "id": "AL1775156870216459",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156870212",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:07:50.217Z"
+    },
+    {
+      "id": "AL1775156870203411",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Updated Partner_orders record",
+      "timestamp": "2026-04-02T19:07:50.207Z"
+    },
+    {
+      "id": "AL1775156870202688",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Updated Partner_orders record",
+      "timestamp": "2026-04-02T19:07:50.205Z"
+    },
+    {
+      "id": "AL17751568134058",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156813403",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:53.407Z"
+    },
+    {
+      "id": "AL1775156813405920",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156813403",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:53.406Z"
+    },
+    {
+      "id": "AL1775156813400899",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156813398",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:53.402Z"
+    },
+    {
+      "id": "AL1775156813400344",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156813398",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:53.401Z"
+    },
+    {
+      "id": "AL1775156813395973",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:06:53.396Z"
+    },
+    {
+      "id": "AL177515681339425",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:06:53.395Z"
+    },
+    {
+      "id": "AL1775156813383600",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "transactions",
+      "recordId": "T1745",
+      "details": "Created new Transactions record",
+      "timestamp": "2026-04-02T19:06:53.386Z"
+    },
+    {
+      "id": "AL177515681338386",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "transactions",
+      "recordId": "T1745",
+      "details": "Created new Transactions record",
+      "timestamp": "2026-04-02T19:06:53.384Z"
+    },
+    {
+      "id": "AL1775156771795563",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156771794",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:11.797Z"
+    },
+    {
+      "id": "AL1775156771794623",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156771794",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:11.796Z"
+    },
+    {
+      "id": "AL177515677178757",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects record",
+      "timestamp": "2026-04-02T19:06:11.790Z"
+    },
+    {
+      "id": "AL1775156771787736",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects record",
+      "timestamp": "2026-04-02T19:06:11.788Z"
+    },
+    {
+      "id": "AL1775156771774118",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156771773",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:11.778Z"
+    },
+    {
+      "id": "AL1775156771774459",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156771773",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:11.775Z"
+    },
+    {
+      "id": "AL177515677176532",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D9288",
+      "details": "Created new Deliveries: \"Guide Rails\"",
+      "timestamp": "2026-04-02T19:06:11.769Z"
+    },
+    {
+      "id": "AL1775156771764455",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D9288",
+      "details": "Created new Deliveries: \"Guide Rails\"",
+      "timestamp": "2026-04-02T19:06:11.766Z"
+    },
+    {
+      "id": "AL1775156764570887",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156764570",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:04.571Z"
+    },
+    {
+      "id": "AL1775156764569271",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156764570",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:04.570Z"
+    },
+    {
+      "id": "AL1775156764564708",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects record",
+      "timestamp": "2026-04-02T19:06:04.566Z"
+    },
+    {
+      "id": "AL1775156764563730",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Updated Projects record",
+      "timestamp": "2026-04-02T19:06:04.564Z"
+    },
+    {
+      "id": "AL1775156764552285",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156764551",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:04.554Z"
+    },
+    {
+      "id": "AL1775156764552907",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156764551",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:06:04.553Z"
+    },
+    {
+      "id": "AL177515676454453",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D6169",
+      "details": "Created new Deliveries: \"Traction Motor\"",
+      "timestamp": "2026-04-02T19:06:04.547Z"
+    },
+    {
+      "id": "AL1775156764543486",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D6169",
+      "details": "Created new Deliveries: \"Traction Motor\"",
+      "timestamp": "2026-04-02T19:06:04.545Z"
+    },
+    {
+      "id": "AL1775156732241110",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732241",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.243Z"
+    },
+    {
+      "id": "AL1775156732241138",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732241",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.241Z"
+    },
+    {
+      "id": "AL1775156732236952",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Updated Partner_orders record",
+      "timestamp": "2026-04-02T19:05:32.237Z"
+    },
+    {
+      "id": "AL1775156732236971",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Updated Partner_orders record",
+      "timestamp": "2026-04-02T19:05:32.236Z"
+    },
+    {
+      "id": "AL1775156732231682",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732231",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.232Z"
+    },
+    {
+      "id": "AL1775156732231680",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732231",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.231Z"
+    },
+    {
+      "id": "AL1775156732226986",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Updated Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T19:05:32.227Z"
+    },
+    {
+      "id": "AL1775156732225741",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Updated Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T19:05:32.226Z"
+    },
+    {
+      "id": "AL1775156732220200",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732220",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.222Z"
+    },
+    {
+      "id": "AL177515673222010",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156732220",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:32.221Z"
+    },
+    {
+      "id": "AL1775156732214665",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "transactions",
+      "recordId": "TXN8363",
+      "details": "Created new Transactions record",
+      "timestamp": "2026-04-02T19:05:32.216Z"
+    },
+    {
+      "id": "AL1775156732214342",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "transactions",
+      "recordId": "TXN8363",
+      "details": "Created new Transactions record",
+      "timestamp": "2026-04-02T19:05:32.215Z"
+    },
+    {
+      "id": "AL1775156712225754",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712225",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.226Z"
+    },
+    {
+      "id": "AL1775156712225138",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712225",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.226Z"
+    },
+    {
+      "id": "AL1775156712220217",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712220",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.221Z"
+    },
+    {
+      "id": "AL1775156712219954",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712220",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.220Z"
+    },
+    {
+      "id": "AL1775156712215483",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D62870",
+      "details": "Created new Deliveries: \"Guide Rails\"",
+      "timestamp": "2026-04-02T19:05:12.216Z"
+    },
+    {
+      "id": "AL1775156712214364",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D62870",
+      "details": "Created new Deliveries: \"Guide Rails\"",
+      "timestamp": "2026-04-02T19:05:12.215Z"
+    },
+    {
+      "id": "AL1775156712210865",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712209",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.211Z"
+    },
+    {
+      "id": "AL1775156712209244",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712209",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.210Z"
+    },
+    {
+      "id": "AL1775156712204131",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D57004",
+      "details": "Created new Deliveries: \"Traction Motor\"",
+      "timestamp": "2026-04-02T19:05:12.205Z"
+    },
+    {
+      "id": "AL1775156712203301",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "deliveries",
+      "recordId": "D57004",
+      "details": "Created new Deliveries: \"Traction Motor\"",
+      "timestamp": "2026-04-02T19:05:12.204Z"
+    },
+    {
+      "id": "AL1775156712197726",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712196",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.199Z"
+    },
+    {
+      "id": "AL1775156712196167",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156712196",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:05:12.198Z"
+    },
+    {
+      "id": "AL1775156712188662",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Updated Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T19:05:12.190Z"
+    },
+    {
+      "id": "AL1775156712188713",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Updated Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T19:05:12.189Z"
+    },
+    {
+      "id": "AL1775156712158817",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Created new Partner_orders record",
+      "timestamp": "2026-04-02T19:05:12.164Z"
+    },
+    {
+      "id": "AL1775156712157550",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "partner_orders",
+      "recordId": "PO1775156719414",
+      "details": "Created new Partner_orders record",
+      "timestamp": "2026-04-02T19:05:12.161Z"
+    },
+    {
+      "id": "AL1775156588406163",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156588397",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:03:08.408Z"
+    },
+    {
+      "id": "AL1775156588405501",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775156588397",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T19:03:08.407Z"
+    },
+    {
+      "id": "AL1775156588388622",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Created new Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:03:08.395Z"
+    },
+    {
+      "id": "AL1775156588386463",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "projects",
+      "recordId": "P7744",
+      "details": "Created new Projects: \"MD Khorsheduzzaman Bappy\"",
+      "timestamp": "2026-04-02T19:03:08.391Z"
+    },
+    {
+      "id": "AL1775155472366551",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155472363",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:44:32.368Z"
+    },
+    {
+      "id": "AL1775155472366603",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155472363",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:44:32.367Z"
+    },
+    {
+      "id": "AL1775155472358778",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Created new Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T18:44:32.360Z"
+    },
+    {
+      "id": "AL1775155472357840",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "suppliers",
+      "recordId": "SUP5416",
+      "details": "Created new Suppliers: \"easy\"",
+      "timestamp": "2026-04-02T18:44:32.359Z"
+    },
+    {
+      "id": "AL1775155426959505",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155426951",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:43:46.961Z"
+    },
+    {
+      "id": "AL1775155426958533",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155426951",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:43:46.960Z"
+    },
+    {
+      "id": "AL1775155426937458",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "settings",
+      "recordId": "company",
+      "details": "Updated Settings: \"AW Engineering Solution\"",
+      "timestamp": "2026-04-02T18:43:46.949Z"
+    },
+    {
+      "id": "AL1775155426934871",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "settings",
+      "recordId": "company",
+      "details": "Updated Settings: \"AW Engineering Solution\"",
+      "timestamp": "2026-04-02T18:43:46.943Z"
+    },
+    {
+      "id": "AL1775155417158719",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155417152",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:43:37.159Z"
+    },
+    {
+      "id": "AL1775155417157928",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "audit_logs",
+      "recordId": "LOG-1775155417152",
+      "details": "Created new Audit_logs: \"Administrator\"",
+      "timestamp": "2026-04-02T18:43:37.158Z"
+    },
+    {
+      "id": "AL1775155417146768",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "settings",
+      "recordId": "company",
+      "details": "Updated Settings: \"AW Engineering Solution\"",
+      "timestamp": "2026-04-02T18:43:37.148Z"
+    },
+    {
+      "id": "AL1775155417145236",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "settings",
+      "recordId": "company",
+      "details": "Updated Settings: \"AW Engineering Solution\"",
+      "timestamp": "2026-04-02T18:43:37.147Z"
+    }
+  ],
   "companySettings": {
     "name": "AW Engineering Solution",
     "address": "House #12, Road #4, Block-B, Banani, Dhaka-1213",
@@ -42,7 +968,13 @@
     "invoicePrefix": "INV",
     "invoiceColor": "#10b981",
     "printMargin": "standard",
-    "invoiceFooter": "Thank you for your business. Please make cheques payable to \"AW Engineering Solution\"."
+    "invoiceFooter": "Thank you for your business. Please make cheques payable to \"AW Engineering Solution\".",
+    "invoiceTerms": "",
+    "invoiceNotes": "",
+    "showLogoOnPrint": true,
+    "showSignaturesOnPrint": true,
+    "printFontFamily": "Inter, sans-serif",
+    "logoUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDI2LTAyLTA1PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkRhdGE+eyZxdW90O2RvYyZxdW90OzomcXVvdDtEQUhBSnAtdXZ3WSZxdW90OywmcXVvdDt1c2VyJnF1b3Q7OiZxdW90O1VBRnFrY0FLdmVnJnF1b3Q7LCZxdW90O2JyYW5kJnF1b3Q7OiZxdW90O0hhdmV1cyZxdW90O308L0F0dHJpYjpEYXRhPgogICAgIDxBdHRyaWI6RXh0SWQ+ZDVhMTA0YzItMjU0ZS00NjY5LTg1NzQtZjdlMjRiMzNlZTk0PC9BdHRyaWI6RXh0SWQ+CiAgICAgPEF0dHJpYjpGYklkPjUyNTI2NTkxNDE3OTU4MDwvQXR0cmliOkZiSWQ+CiAgICAgPEF0dHJpYjpUb3VjaFR5cGU+MjwvQXR0cmliOlRvdWNoVHlwZT4KICAgIDwvcmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC9BdHRyaWI6QWRzPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpkYz0naHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8nPgogIDxkYzp0aXRsZT4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPlVudGl0bGVkIGRlc2lnbiAtIDE8L3JkZjpsaT4KICAgPC9yZGY6QWx0PgogIDwvZGM6dGl0bGU+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOnBkZj0naHR0cDovL25zLmFkb2JlLmNvbS9wZGYvMS4zLyc+CiAgPHBkZjpBdXRob3I+U00gU2hhaGFkYXQgSG9zc2FpbjwvcGRmOkF1dGhvcj4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6eG1wPSdodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvJz4KICA8eG1wOkNyZWF0b3JUb29sPkNhbnZhIChSZW5kZXJlcikgZG9jPURBSEFKcC11dndZIHVzZXI9VUFGcWtjQUt2ZWcgYnJhbmQ9SGF2ZXVzPC94bXA6Q3JlYXRvclRvb2w+CiA8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KPD94cGFja2V0IGVuZD0ncic/Pqt1iMkAAABOZVhJZk1NACoAAAAIAAQBGgAFAAAAAQAAAD4BGwAFAAAAAQAAAEYBKAADAAAAAQACAAACEwADAAAAAQABAAAAAAAAAAAAYAAAAAEAAABgAAAAAXcF3+cAAAQcSURBVHic7ZZdTJNnFMd/pylYKIVKsWRkUy5UQjQxhKvN4aKxzhnnEMqECYlWhBCzRS9MvDHZLk1MvDAhmi1BBFKLt0adMMImHyEEMQrlw6lRr/TCeOGkRd737KK1ha7URBfcEs7de573Ob/znP85Tx5Rn4/RUZbYSktFS0qWmgqA5YNQl8HL4GXw0oLVZsNu/3doIuTkIPJ2sOblqd+vlzu1oOD9uerx6JUrevIkIinBIni98vEnuPNpbHhfqt2uR4+SkUFRERZLSnBOjpaXIwB8tUuLit6LvOdrcbsB/H5MMxVYa2okLy/6YbFQV0fqRFOYw0HVtwBTU3L9OqqLBlK3WysrAUZH6eoC2LJF16x5N656PKxejWnS3sbcHKmaa+9eycnBMGhupqNdw2Hsdurq3gVrt9PYCPDokfT+HvElB+vKlVRUIKIjIzI2JsEJGR5GlV2LKy2yGFe9XlwugJYWZmZSgampxuXCNMXv5/VrTJOzZ5mdxWpNrrSIVlZqcXESqtNJRLLxcbl6NeZPAtb8fLxVgN65IwMD0cgPHmhU6S8oLEzckpnJoUP6XU2SM2zfTkEBpkFb23x3ktzxesnOxjDk3DkM401slc5OwmEyM/TAgcRdtftZtUo8O3TdugV+h4P6eoA/70tfX0qw06l79gAMD8vt2wtSCgYZHATYuVM3bIgvuFx8Uw5gtXL48HwhtKqKyEBeuEAolAqs1fvE5cIwCAQifR/1Z2RgtdLczOwsFgu1tVGAiO7eTeRmEOGzT2NK60qnlpcD3L0r3d0JoAVgdbt1XzXA+Lj092O3a0mJHjmiHR309OipU/LkCT09AGVlrF0LaFaW7t8P8Pw5oRC2DGreKP3lTin4CNOkvR3TTAWmskKysjAMWlvNhgbz4kXOn8fnY/160tLYvFk3bRK/n1AIm00PHkREa2slNxfgzBnt7gLweHTjRnU48PlAuHcv1qHzzRo/bm5uRCo1TX76UbIcgJqGPH6sU5PcfyBPnzI3RzDIwADbtuHxaM9vEmmIyUm5cYPJSfXskPR06uuZCBJJqLU1NrvzLf6gNxsb5HDDm3tAmTMYHKStTSYmmJlBNZ5i4RouBUizEgqzYgWqHD8uvb2AnjiB14thYBqkpTM2Jj7fP+s8r9Rut1TXRJGqDA3R1CTHjsnICK9ezacC8ugx166hYLMBBIMyNBRdCgR4+RKrlfQVEcmSUuNgrdiLwwHw8i9On5bvf5BbtxJ4cVOVQIBQKPrD5c54MR8+pL8PVVSZnk6qbsKJ86Pbmprk0qX4vbGYTU/rzT9AmZqSX28sqMfPv0RHtqWFcHixAFGN1emk7HNu9smLF29BxiwzU7duleFhnj1LWNHiYrKzY/VPBV56+w8/b5fBy+D/H/iDzHFp6d+mk59uAMDUcAAAAABJRU5ErkJggg=="
   },
   "rolesList": [
     "ADMIN",
@@ -70,5 +1002,244 @@
     "G+10",
     "G+12",
     "G+15"
+  ],
+  "audit_logs": [
+    {
+      "id": "LOG-1775155417152",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "System",
+      "details": "Updated company profile settings",
+      "timestamp": "4/3/2026, 12:43:37 AM"
+    },
+    {
+      "id": "LOG-1775155426951",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "System",
+      "details": "Updated company profile settings",
+      "timestamp": "4/3/2026, 12:43:46 AM"
+    },
+    {
+      "id": "LOG-1775155472363",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "User",
+      "details": "Added supplier: easy",
+      "timestamp": "4/3/2026, 12:44:32 AM"
+    },
+    {
+      "id": "LOG-1775156588397",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "Project",
+      "details": "Created project: MD Khorsheduzzaman Bappy",
+      "timestamp": "4/3/2026, 1:03:08 AM"
+    },
+    {
+      "id": "LOG-1775156712196",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "User",
+      "details": "Updated supplier: easy",
+      "timestamp": "4/3/2026, 1:05:12 AM"
+    },
+    {
+      "id": "LOG-1775156712209",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "System",
+      "details": "Added delivery item to project P7744",
+      "timestamp": "4/3/2026, 1:05:12 AM"
+    },
+    {
+      "id": "LOG-1775156712220",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "System",
+      "details": "Added delivery item to project P7744",
+      "timestamp": "4/3/2026, 1:05:12 AM"
+    },
+    {
+      "id": "LOG-1775156712225",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "Transaction",
+      "details": "Created Partner Order INV-2026-2186",
+      "timestamp": "4/3/2026, 1:05:12 AM"
+    },
+    {
+      "id": "LOG-1775156732220",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "Transaction",
+      "details": "Added EXPENSE of 200000 to project.",
+      "timestamp": "4/3/2026, 1:05:32 AM"
+    },
+    {
+      "id": "LOG-1775156732231",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "User",
+      "details": "Updated supplier: easy",
+      "timestamp": "4/3/2026, 1:05:32 AM"
+    },
+    {
+      "id": "LOG-1775156732241",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Transaction",
+      "details": "Updated Partner Order INV-2026-2186",
+      "timestamp": "4/3/2026, 1:05:32 AM"
+    },
+    {
+      "id": "LOG-1775156764551",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "System",
+      "details": "Added delivery item to project P7744",
+      "timestamp": "4/3/2026, 1:06:04 AM"
+    },
+    {
+      "id": "LOG-1775156764570",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Project",
+      "details": "Updated status to Pending (33%) for project ID P7744",
+      "timestamp": "4/3/2026, 1:06:04 AM"
+    },
+    {
+      "id": "LOG-1775156771773",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "System",
+      "details": "Added delivery item to project P7744",
+      "timestamp": "4/3/2026, 1:06:11 AM"
+    },
+    {
+      "id": "LOG-1775156771794",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Project",
+      "details": "Updated status to Pending (50%) for project ID P7744",
+      "timestamp": "4/3/2026, 1:06:11 AM"
+    },
+    {
+      "id": "LOG-1775156813398",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Project",
+      "details": "Updated project: MD Khorsheduzzaman Bappy",
+      "timestamp": "4/3/2026, 1:06:53 AM"
+    },
+    {
+      "id": "LOG-1775156813403",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "CREATE",
+      "entity": "Transaction",
+      "details": "Added INCOME of 1200000 to project.",
+      "timestamp": "4/3/2026, 1:06:53 AM"
+    },
+    {
+      "id": "LOG-1775156870212",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Transaction",
+      "details": "Updated Partner Order INV-2026-2186",
+      "timestamp": "4/3/2026, 1:07:50 AM"
+    },
+    {
+      "id": "LOG-1775156916661",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "User",
+      "details": "Deleted supplier ID: SUP5416",
+      "timestamp": "4/3/2026, 1:08:36 AM"
+    },
+    {
+      "id": "LOG-1775156920545",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "Transaction",
+      "details": "Deleted transaction TXN8363",
+      "timestamp": "4/3/2026, 1:08:40 AM"
+    },
+    {
+      "id": "LOG-1775156922361",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "UPDATE",
+      "entity": "Project",
+      "details": "Updated project: MD Khorsheduzzaman Bappy",
+      "timestamp": "4/3/2026, 1:08:42 AM"
+    },
+    {
+      "id": "LOG-1775156922370",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "Transaction",
+      "details": "Deleted transaction T1745",
+      "timestamp": "4/3/2026, 1:08:42 AM"
+    },
+    {
+      "id": "LOG-1775156925990",
+      "userId": "u1",
+      "userName": "Administrator",
+      "action": "DELETE",
+      "entity": "Project",
+      "details": "Deleted project ID: P7744",
+      "timestamp": "4/3/2026, 1:08:45 AM"
+    }
+  ],
+  "partner_orders": [
+    {
+      "id": "PO1775156719414",
+      "partnerId": "SUP5416",
+      "projectId": "P7744",
+      "description": "INV-2026-2186",
+      "items": [
+        {
+          "itemName": "Traction Motor",
+          "quantity": 1,
+          "unitPrice": 136000,
+          "total": 136000
+        },
+        {
+          "itemName": "Guide Rails",
+          "quantity": 10,
+          "unitPrice": 7400,
+          "total": 74000
+        }
+      ],
+      "contractAmount": 210000,
+      "paidAmount": 200000,
+      "date": "2026-04-02",
+      "isDelivered": true,
+      "createdBy": "u1",
+      "isApproved": true,
+      "pendingUpdate": null,
+      "pendingDelete": null
+    }
   ]
 }

@@ -751,7 +751,7 @@ app.put("/api/:collection/:id", async (req, res, next) => {
     const id = req.params.id;
     const userRole = req.headers['x-user-role'];
     const userId = req.headers['x-user-id'];
-    if (collection === 'backup' || collection === 'settings' || collection === 'leads/bulk')
+    if (collection === 'backup' || collection === 'leads/bulk')
         return next();
     const tableName = collection.replace(/[A-Z]/g, (l) => `_${l.toLowerCase()}`);
     try {
